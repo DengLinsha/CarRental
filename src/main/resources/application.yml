@@ -1,0 +1,35 @@
+
+#mybatis:
+#  mapper-locations: classpath:mappers/*xml
+#  type-aliases-package: com.car.mybatis.entity
+
+server:
+  port: 9999
+  servlet:
+    context-path: /car
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.car.entity
+
+file:
+  upload-path: D:\AlibabaCloud\项目\汽车租赁系统\src\main\resources\static\imgs\
+
+#212.64.28.107
+#10.201.218.218
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/car?serverTimezone=UTC
+    username: root
+    password: 456456
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+#    swagger配置
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
